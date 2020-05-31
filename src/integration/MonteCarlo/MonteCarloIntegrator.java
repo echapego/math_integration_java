@@ -3,7 +3,6 @@ package integration.MonteCarlo;
 import distributions.ContinuousDistribution;
 import integration.Function;
 import integration.Integrator;
-import integration.MonteCarlo.MonteCarloHelper;
 
 public class MonteCarloIntegrator implements Integrator {
 

@@ -4,9 +4,9 @@ import distributions.*;
 import integration.IdenticalUpperAndLowerLimitsException;
 import integration.NotSupportedLimitsException;
 
-public class MonteCarloHelper {
+class MonteCarloHelper {
 
-    public static ContinuousDistribution getDistribution (double a, double b) {
+    static ContinuousDistribution getDistribution (double a, double b) {
         if (a == b) {
             throw new IdenticalUpperAndLowerLimitsException();
         }
