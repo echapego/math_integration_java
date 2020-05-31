@@ -15,7 +15,7 @@ public class UniformDistribution extends ContinuousDistribution {
 
     public UniformDistribution (double a, double b) {
         if (a == b) {
-            //exception
+            throw new IllegalArgumentException("Parameters of uniform distribution can't be equal.");
         } else {
             this.a = a;
             this.b = b;

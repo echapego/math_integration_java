@@ -2,14 +2,15 @@ package distributions;
 
 public class GeometricDistribution extends DiscreteDistribution {
 
-    private int p;
+    private double p;
+
     @Override
     public double PMF(int x) {
         return Math.pow((1 - p), x) * p;
     }
 
     @Override
-    public double CDF(double x) { //how to work with situation when we have double in discrete
+    public double CDF(double x) {
         return 1 - Math.pow((1 - p), x + 1);
     }
 
@@ -28,7 +29,7 @@ public class GeometricDistribution extends DiscreteDistribution {
         return (1 - p) / p;
     }
 
-    public GeometricDistribution (int p) {
+    public GeometricDistribution (double p) {
         this.p = p;
     }
 }

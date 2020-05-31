@@ -3,7 +3,6 @@ import integration.IdenticalUpperAndLowerLimitsException;
 import integration.MonteCarlo.MonteCarloIntegrator;
 import integration.NotSupportedLimitsException;
 import integration.NumericApproach.*;
-import integration.MonteCarlo.*;
 
 public class test {
 
@@ -87,7 +86,7 @@ public class test {
         /*a = -inf test*/
         System.out.println();
         System.out.println("int(exp(x)dx, x=-inf..0) = 1");
-        integrand = (x)->Math.exp(x);
+        integrand = Math::exp;
         a = Double.NEGATIVE_INFINITY;
         b = 0;
 
