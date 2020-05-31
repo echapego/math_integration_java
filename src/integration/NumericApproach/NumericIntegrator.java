@@ -21,7 +21,7 @@ public class NumericIntegrator <T extends NumericApproach> implements Integrator
         if (a == b){
             throw new IdenticalUpperAndLowerLimitsException();
         }
-        double previousResult = 0, currentResult = 0;
+        double previousResult, currentResult = 0;
         double h;
         int n = 2;
         do {
@@ -30,7 +30,7 @@ public class NumericIntegrator <T extends NumericApproach> implements Integrator
             h = (b - a) / n;
             for (double left = a; left <= b; left += h) {
                 double right = left + h;
-                currentResult += approach.method_x(integrand, left, right);
+                currentResult += approach.getArea(integrand, left, right);
             }
             n *= 2;
         } while (Math.abs(currentResult - previousResult ) > eps);
